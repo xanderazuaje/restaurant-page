@@ -1,0 +1,169 @@
+@import url("https://use.typekit.net/kyg1tra.css");
+@import url("https://use.typekit.net/kyg1tra.css");
+@import url("https://use.typekit.net/kyg1tra.css");
+
+body{
+    background-color: var(--white);
+    color: var(--black);
+}
+*{
+    box-sizing: border-box;
+}
+
+:root{
+  --white: #F8F8F8;
+  --green: #A0EE7C;
+  --black: #28273B;
+  --red: #C56B6B;
+}
+
+.title{
+    font-family: "gastromond", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 52px;
+    line-height: 62px;
+}
+
+.bodyFont{
+    font-family: "expo-serif-pro", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 50px;
+}
+
+.smallText{
+    font-family: "expo-serif-pro", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+}
+.subTitle{
+    font-family: "houschka-rounded", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: var(--black);
+    margin: 50px 0;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    height: fit-content;
+    padding: 20px 0 ;
+}
+nav > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    gap: 30px;
+}
+nav > ul > li {
+    line-height: 1 !important;
+    cursor: pointer;
+}
+nav > ul > li:hover{
+    color: var(--red);
+}
+
+nav > h1{
+    margin: 0;
+    line-height: 1 !important;
+    cursor: pointer;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex !important;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+main > .presentation{
+    max-width: 500px;
+}
+
+main > .presentation > button{
+    background-color: var(--green);
+    border: 0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+main > .presentation > button:hover{
+    background-color: var(--black);
+    color: var(--green);
+}
+
+main > figure{
+    margin: 0;
+    position: relative;
+}
+main > figure > img {
+    max-width: 400px;
+    aspect-ratio: auto;
+    transform: scale(0.9);
+}
+
+main > figure > .square{
+    width: 100%;
+    height: 100%;
+    border: var(--green) solid 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.9) rotate(5deg);
+    z-index: -99999;
+}
+main > figure > .frontShape{
+    position: absolute;
+    z-index: 9999;
+    width: 270px;
+    height: 400px;
+    background-color: var(--green);
+    bottom: 2px;
+    right: 0;
+    border-radius: 150px;
+    mix-blend-mode: multiply;
+}
+
+main > aside{
+    width: min-content;
+    padding: 0px 20px;
+}
+
+main > aside > * > span{
+    color: var(--red);
+}
+
+main > footer{
+    width: 100%;
+    display: flex;
+    gap: 150px;
+    padding: 50px 0;
+}
+
+main > footer > article{
+    max-width: 300px;
+}
+main > footer > article > q {
+    line-height: 0 !important;
+}
+
+main > footer > article > h3 {
+    margin: 0;
+}
