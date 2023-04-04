@@ -73,6 +73,7 @@ nav > ul {
 nav > ul > li {
     line-height: 1 !important;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 nav > ul > li:hover{
     color: var(--red);
