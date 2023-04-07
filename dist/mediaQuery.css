@@ -1,0 +1,115 @@
+@media screen and (max-width: 600px) {
+
+
+    .title{
+        font-size: 35px;
+    }
+    .bodyFont{
+        font-size: 20px;
+    }
+    .navContainer{
+        padding: 0 20px;
+    }
+    .navItems{
+        display: none;
+    }
+    .hamburgerMenu{
+        display: block;
+    }
+
+    #home > * :not(.review){
+        text-align: center;
+    }
+    #home{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    .home__presentation{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px;
+        order: 2;
+    }
+    .home__presentation > button{
+        width: fit-content;
+        align-self: center;
+    }
+    .home__image{
+        order: 1;
+        width: 70vw;
+    }
+    .home__information{
+        order: 3;
+    }
+    .reviews{
+        order: 4;
+        flex-direction: column;
+        justify-content: left;
+        padding: 30px;
+        gap: 50px;
+    }
+
+    .reviews__element{
+        width: 100%;
+    }
+    .reviews > *{
+        text-align: left !important;
+    }
+
+    #about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        padding: 0 10px;
+        gap: 50px;
+    }
+    .about__title{
+        margin: 0;
+    }
+    .about__paragraph{
+        flex-direction: column;
+        width: 100%;
+        gap: 50px;
+    }
+    .about__paragraph > p, .about__paragraph-wide > p{
+        margin: 0;
+    }
+    .about__paragraph:nth-child(3){
+        flex-direction: column-reverse;
+    }
+    .about__paragraph > img, .about__imageWrapper{
+        width: 70vw;
+        height: auto;
+    }
+    .about__imageWrapper > img, .about__imageWrapper > .square{
+        width: 100%;
+        transform: translateX(0);
+    }
+    .about__imageWrapper > img{
+        transform: rotate(-5deg);
+    }
+    .about__paragraph-wide > img, .about__paragraph-wide > .square{
+        display: none;
+    }
+    .about__paragraph-wide{
+        margin: 0;
+    }
+    #about > footer > .circle{
+        z-index: -9999;
+    }
+
+    #menu{
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+    #menu::after{
+        width: 25%;
+        left: 0;
+        height: 100%;
+        position: absolute;
+    }
+}
