@@ -1,4 +1,5 @@
 import { FONTS, NAV_ITEMS, HAMBURGER_MENU } from "../constants"
+import { addTitle } from "../functions";
 
 const navContainer = document.createElement('header');
         navContainer.classList.add('navContainer')
@@ -6,9 +7,7 @@ const navContainer = document.createElement('header');
 const nav = document.createElement('nav');
         nav.classList.add('nav')
 
-const homeLogo = document.createElement('h1')
-        homeLogo.classList.add(FONTS.title)
-        homeLogo.textContent = 'Tortuga'
+const homeLogo = addTitle("Tortuga")
 
 const pagesContainer = document.createElement('ul')
         pagesContainer.classList.add('navItems')
