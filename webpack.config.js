@@ -6,7 +6,7 @@ module.exports = {
             directory: path.join(__dirname, 'dist'),
         }
     },
-  entry: './src/script.js',
+  entry: './src/entry.js',
   output: {
     filename: 'script.js',
     path: path.resolve(__dirname, 'dist'),
