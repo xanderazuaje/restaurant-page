@@ -113,3 +113,17 @@
         position: absolute;
     }
 }
+@media screen and (max-width: 1205px) {
+    .home__information{
+        display: flex;
+        width: 100%;
+        gap: 50px;
+        justify-content: stretch;
+        align-items: flex-start;
+    }
+    .home__information > *{
+        margin: 0;
+        flex-grow: 1;
+        width: fit-content;
+    }
+}
