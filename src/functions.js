@@ -15,4 +15,19 @@ function addSecondTitle(text){
     return h2
 }
 
-export {addTitle, addSecondTitle}
+function addAddressElement(title, text){
+    const element = document.createElement("p")
+    element.classList.add(FONTS.subTitle)
+
+    const span = document.createElement("span")
+    span.textContent = title
+
+    const br = document.createElement('br');
+
+    element.textContent = `${text}`
+    element.prepend(span, br)
+
+    return element
+}
+
+export {addTitle, addSecondTitle, addAddressElement}
