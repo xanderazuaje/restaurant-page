@@ -34,6 +34,7 @@ const STAR_SVG = document.createElementNS(SVG_NAMESPACE, "svg")
 const starShape = document.createElementNS(SVG_NAMESPACE, "path")
     starShape.setAttribute("d", STAR_PATH)
     starShape.setAttribute("fill", STAR_COLOR)
+STAR_SVG.append(starShape)
 
 const FONTS = {
   bodyFont: "bodyFont",
@@ -44,4 +45,4 @@ const FONTS = {
 
 const NAV_ITEMS = ["Home", "Menu", "About"];
 
-export { BODY, HAMBURGER_MENU, FONTS, NAV_ITEMS };
+export { BODY, HAMBURGER_MENU, FONTS, NAV_ITEMS, STAR_SVG };
