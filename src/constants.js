@@ -31,6 +31,12 @@ const FONTS = {
   smallText: "smallText",
 };
 
+const IMAGES = {
+    first: "https://www.nicepng.com/png/full/54-547446_contact-us-plate-of-jamaican-food-png.png",
+    second: "https://images.unsplash.com/photo-1540420828642-fca2c5c18abe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=682&q=80",
+    third: "https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1954&q=80"
+}
+
 const NAV_ITEMS = ["Home", "Menu", "About"];
 
-export { BODY, HAMBURGER_MENU, FONTS, NAV_ITEMS, SVG_NAMESPACE };
+export { BODY, HAMBURGER_MENU, FONTS, NAV_ITEMS, SVG_NAMESPACE, IMAGES };
