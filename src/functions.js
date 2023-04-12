@@ -74,4 +74,33 @@ function addReview(criticsName, review, stars){
     return container
 }
 
-export {addTitle, addSecondTitle, addAddressElement, addReview}
+function addAboutParagraph(text){
+
+    const regex = /\{([^}]+)\}/g
+    const matches = text.matchAll(regex)
+
+    let index = 0
+    const elements = []
+    for (const match of matches) {
+      const spanText = match[1]
+      const plainText = text.slice(index, match.index)
+      if (plainText) {
+        elements.push(document.createTextNode(plainText))
+      }
+      const span = document.createElement("span")
+      span.textContent = spanText
+      elements.push(span)
+      index = match.index + match[0].length
+    }
+    const plainText = text.slice(index)
+    if (plainText) {
+      elements.push(document.createTextNode(plainText))
+    }
+    const paragraph = document.createElement("p")
+    paragraph.classList.add(FONTS.smallText)
+    elements.forEach((element) => paragraph.appendChild(element))
+    return paragraph
+
+}
+
+export {addTitle, addSecondTitle, addAddressElement, addReview, addAboutParagraph}
