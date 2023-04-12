@@ -22,7 +22,7 @@ function addAddressElement(title, text){
     const span = document.createElement("span")
     span.textContent = title
 
-    const br = document.createElement('br');
+    const br = document.createElement("br");
 
     element.textContent = `${text}`
     element.prepend(span, br)
@@ -34,8 +34,8 @@ const starPath = "M9.54894 0.927049C9.8483 0.00573857 11.1517 0.00574037 11.4511
 const starColor = "#C56B6B"
 
 function addStars(amount){
-    const starContainer = document.createElement('div')
-        starContainer.classList.add('stars')
+    const starContainer = document.createElement("div")
+        starContainer.classList.add("stars")
 
     for (let i = 0; i < amount; i++) {
     const starSvg = document.createElementNS(SVG_NAMESPACE, "svg")
@@ -56,15 +56,15 @@ function addStars(amount){
 }
 
 function addReview(criticsName, review, stars){
-    const container = document.createElement('article')
-        container.classList.add('reviews__element')
+    const container = document.createElement("article")
+        container.classList.add("reviews__element")
 
-    const criticsNameElement = document.createElement('h3')
+    const criticsNameElement = document.createElement("h3")
         criticsNameElement.classList.add(FONTS.subTitle)
         criticsNameElement.textContent = criticsName
     container.append(criticsNameElement)
 
-    const reviewElement = document.createElement('q')
+    const reviewElement = document.createElement("q")
         reviewElement.classList.add(FONTS.smallText)
         reviewElement.textContent = review
     container.append(reviewElement)
@@ -117,10 +117,55 @@ function addAboutParagraph(text){
 
 }
 
+function addPlateToMenu(name, description, price){
+    const plate = document.createElement("div")
+    plate.classList.add("food")
+
+    const nameElement = document.createElement("p")
+    nameElement.classList.add(FONTS.subTitle)
+    nameElement.textContent = name
+
+    const descriptionElement = document.createElement("p")
+    descriptionElement.classList.add(FONTS.smallText)
+    descriptionElement.textContent = description
+
+    const priceElement = document.createElement("p")
+    priceElement.classList.add(FONTS.subTitle)
+    priceElement.textContent = price
+
+    plate.append(nameElement, descriptionElement, priceElement)
+    return plate
+}
+
+function addMenuCard(title, plates){
+    const category = document.createElement("article")
+    category.classList.add("categories")
+
+    const titleElement = document.createElement('h2')
+    titleElement.classList.add(FONTS.title)
+    titleElement.textContent = title
+
+    category.append(titleElement)
+
+    plates.forEach(each => {
+        category.append(
+            addPlateToMenu(
+                each.name,
+                each.description,
+                each.price
+            )
+        )
+    });
+
+
+    return category
+}
+
 export {
     addTitle,
     addSecondTitle,
     addAddressElement,
     addReview,
-    addAboutParagraph
+    addAboutParagraph,
+    addMenuCard
 }
