@@ -30,6 +30,9 @@ nav.append(pagesContainer)
 nav.append(HAMBURGER_MENU)
 navContainer.append(nav)
 
+
+nav.querySelector("#Home").classList.add('clickedElement')
+
 const menuElement = Array.from(navContainer.querySelectorAll(".menuElement"))
 
 menuElement.forEach(each => {
