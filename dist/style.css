@@ -270,15 +270,6 @@ nav > h1 {
   right: 0;
 }
 
-#menu::after {
-  content: "";
-  background-color: var(--green);
-  position: fixed;
-  width: 1200px;
-  height: 100px;
-  z-index: -9999;
-}
-
 #menu {
   position: relative;
   display: flex;
@@ -306,4 +297,8 @@ nav > h1 {
 
 #menu > .categories > .food > * {
   margin: 0 0 10px 0;
+}
+
+.clickedElement{
+  color: var(--green);
 }
